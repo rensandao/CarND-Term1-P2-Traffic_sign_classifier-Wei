@@ -48,9 +48,14 @@ As is shown, some of data is obviously higher, while some others look like too l
 
 ### Design and Test a Model Architecture
 
-#### 1. Describe how you preprocessed the image data. What techniques were chosen and why did you choose these techniques? Consider including images showing the output of each preprocessing technique. Pre-processing refers to techniques such as converting to grayscale, normalization, etc. (OPTIONAL: As described in the "Stand Out Suggestions" part of the rubric, if you generated additional data for training, describe why you decided to generate additional data, how you generated the data, and provide example images of the additional data. Then describe the characteristics of the augmented training set like number of images in the set, number of images for each class, etc.)
+#### 1. Preprocess the image data.
 
-As a first step, I decided to convert the images to grayscale because ...
+For a first try, I converted the images to grayscale. Because basically color is not main feature in sign classifier, using grayscale can make it easier for Iterative calculation.
+After grayscale, I applied Data normalization to get the input features data close in certain scope(-1,1). That can make Loss Optimization more concentrated and faster.
+With them, the final valudation accuracy can achieve 0.899 at most. This is obviously lower than aquirement(0.93).
+After watching images from the train set, I found some of them have low background contrast, which quitely make it hard to classify. So
+I decided to apply [CLAHE](https://docs.opencv.org/3.1.0/d5/daf/tutorial_py_histogram_equalization.html) to promote contrast. And it did work. The validation accuracy comes to 94.1%, an obvious improvement. 
+
 
 Here is an example of a traffic sign image before and after grayscaling.
 
@@ -69,21 +74,24 @@ Here is an example of an original image and an augmented image:
 The difference between the original data set and the augmented data set is the following ... 
 
 
-#### 2. Describe what your final model architecture looks like including model type, layers, layer sizes, connectivity, etc.) Consider including a diagram and/or table describing the final model.
+#### 2. Model architecture
 
 My final model consisted of the following layers:
 
-| Layer         		|     Description	        					| 
-|:---------------------:|:---------------------------------------------:| 
-| Input         		| 32x32x3 RGB image   							| 
-| Convolution 3x3     	| 1x1 stride, same padding, outputs 32x32x64 	|
-| RELU					|												|
-| Max pooling	      	| 2x2 stride,  outputs 16x16x64 				|
-| Convolution 3x3	    | etc.      									|
-| Fully connected		| etc.        									|
-| Softmax				| etc.        									|
-|						|												|
-|						|												|
+| Layer         		|     Description	        					                       | Input | Output |
+|:---------------------:|:---------------------------------------------:|:----:|:----:| 
+| 1.Convolution 3x3    | 1x1 stride, valid padding, RELU activation 	|##**32x32x1**|28x28x6|
+| RELU					            | 							activation                             |           | 						|
+| Max pooling			       | 2x2 stride, 2x2 kernel size						           |28x28x6    |14x14x6|
+| 2.Convolution 5x5 	  | 1x1 stride, valid padding, RELU activation 	|14x14x6    |10x10x16|
+| RELU					            | 												                                |           | 						|
+| Max pooling			       | 2x2 stride, 2x2 kernel size	   					        |10x10x16   |5x5x16 |
+| Flatten				          | 3 dimensions -> 1 dimension					            |5x5x16     | 400   |
+| 3.Fully Connected    | connect all layers                   			    |400        | 120   |
+| dropout				          | 		    drop some datas avoiding 	overfitting |           | 						|
+| 4.Fully Connected    | output = number of traffic signs in data set	|120|84|
+| RELU					            | 							activation                             |         | 						|
+| 5.Fully Connected    | 	           connect all 43 layers             |83       |     43|
  
 
 
