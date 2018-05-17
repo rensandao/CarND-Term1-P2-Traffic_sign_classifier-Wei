@@ -87,11 +87,11 @@ My final model consisted of the following layers:
 | RELU					            | 							activation                             |           | 						|
 | Max pooling			       | 2x2 stride, 2x2 kernel size						           |28x28x6    |14x14x6|
 | 2.Convolution 5x5 	  | 1x1 stride, valid padding, RELU activation 	|14x14x6    |10x10x16|
-| RELU					            | 												                                |           | 						|
+| RELU					            | 							activation                           |           | 						|
 | Max pooling			       | 2x2 stride, 2x2 kernel size	   					        |10x10x16   |5x5x16 |
 | Flatten				          |                            					            |5x5x16     | 400   |
 | 3.Fully Connected    | connect all layers                   			    |400        | 120   |
-| RELU					            | 												                                |           | 						|
+| RELU					            | 							activation                           |           | 						|
 | dropout				          | 		 drop some datas avoiding 	overfitting    |           | 						|
 | 4.Fully Connected    |                                             |120|84|
 | RELU					            | 							activation                            |         | 						|
@@ -109,9 +109,13 @@ During adjustment, I also added a Dropout layer to see whether it help release o
 The number of epochs has also been related to trainning effect. worrying it took too long, I only set it to 20 at most. Learning rate was set to 0.001 at first and then 0.0008. As epoch was low, I didn't see obvious change for now.
 
 Here are my parameters for tranning:
+
 rate=0.0008
+
 EPOCHS = 20
+
 BATCH_SIZE = 128
+
 SIGMA = 0.1
 
 
