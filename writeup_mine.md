@@ -51,8 +51,11 @@ As is shown, some of data is obviously higher, while some others look like too l
 #### 1. Preprocess the image data.
 
 For a first try, I converted the images to grayscale. Because basically color is not main feature in sign classifier, using grayscale can make it easier for Iterative calculation.
+
 After grayscale, I applied Data normalization to get the input features data close in certain scope(-1,1). That can make Loss Optimization more concentrated and faster.
+
 With them, the final valudation accuracy can achieve 0.899 at most. This is obviously lower than aquirement(0.93).
+
 After watching images from the train set, I found some of them have low background contrast, which quitely make it hard to classify. So
 I decided to apply [CLAHE](https://docs.opencv.org/3.1.0/d5/daf/tutorial_py_histogram_equalization.html) to promote contrast. And it did work. The validation accuracy comes to 94.1%, an obvious improvement. 
 
@@ -80,7 +83,7 @@ My final model consisted of the following layers:
 
 | Layer         		|     Description	        					                       | Input | Output |
 |:---------------------:|:---------------------------------------------:|:----:|:----:| 
-| 1.Convolution 3x3    | 1x1 stride, valid padding, RELU activation 	|##**32x32x1**|28x28x6|
+| 1.Convolution 3x3    | 1x1 stride, valid padding, RELU activation 	|**32x32x1**|28x28x6|
 | RELU					            | 							activation                             |           | 						|
 | Max pooling			       | 2x2 stride, 2x2 kernel size						           |28x28x6    |14x14x6|
 | 2.Convolution 5x5 	  | 1x1 stride, valid padding, RELU activation 	|14x14x6    |10x10x16|
@@ -90,8 +93,8 @@ My final model consisted of the following layers:
 | 3.Fully Connected    | connect all layers                   			    |400        | 120   |
 | dropout				          | 		    drop some datas avoiding 	overfitting |           | 						|
 | 4.Fully Connected    | output = number of traffic signs in data set	|120|84|
-| RELU					            | 							activation                             |         | 						|
-| 5.Fully Connected    | 	           connect all 43 layers             |83       |     43|
+| RELU					            | 							activation                            |         | 						|
+| 5.Fully Connected    | 	      connect all 43 layers                 |83       | **43**|
  
 
 
