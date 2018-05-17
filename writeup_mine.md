@@ -89,11 +89,11 @@ My final model consisted of the following layers:
 | 2.Convolution 5x5 	  | 1x1 stride, valid padding, RELU activation 	|14x14x6    |10x10x16|
 | RELU					            | 							activation                           |           | 						|
 | Max pooling			       | 2x2 stride, 2x2 kernel size	   					        |10x10x16   |5x5x16 |
-| Flatten				          |                            					            |5x5x16     | 400   |
-| 3.Fully Connected    | connect all layers                   			    |400        | 120   |
+| Flatten				          |          flatten 3D to 1D  					            |5x5x16     | 400   |
+| 3.Fully Connected    |   connect some layers                			    |400        | 120   |
 | RELU					            | 							activation                           |           | 						|
 | dropout				          | 		 drop some datas avoiding 	overfitting    |           | 						|
-| 4.Fully Connected    |                                             |120|84|
+| 4.Fully Connected    |          connect some layers                 |120|84|
 | RELU					            | 							activation                            |         | 						|
 | 5.Fully Connected    | 	      connect all 43 layers                 |83       | **43**|
  
@@ -136,7 +136,7 @@ Here are five German traffic signs that I found on the web:
 ![alt text][image4] ![alt text][image5] ![alt text][image6] 
 ![alt text][image7] ![alt text][image8]
 
-The first image might be difficult to classify because ...
+Actually, I think these five images can be easy to dectect, because we can easily distinguish them with our real eye. However, it came out to be a little different.
 
 #### 2. Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set. At a minimum, discuss what the predictions were, the accuracy on these new predictions, and compare the accuracy to the accuracy on the test set (OPTIONAL: Discuss the results in more detail as described in the "Stand Out Suggestions" part of the rubric).
 
@@ -144,11 +144,11 @@ Here are the results of the prediction:
 
 | Image			        |     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
-| Stop Sign      		| Stop sign   									| 
-| U-turn     			| U-turn 										|
-| Yield					| Yield											|
-| 100 km/h	      		| Bumpy Road					 				|
-| Slippery Road			| Slippery Road      							|
+| Right-of-way at the next intersection     | Right-of-way at the next intersection						| 
+| Speed limit(30km/h)     			| Speed limit(30km/h) 									|
+| Turn left ahead					| Turn left ahead									|
+| General caution	      		| General caution					 				|
+| Speed limit(60km/h)			| Speed limit(50km/h)  |
 
 
 The model was able to correctly guess 4 of the 5 traffic signs, which gives an accuracy of 80%. This compares favorably to the accuracy on the test set of ...
@@ -161,11 +161,11 @@ For the first image, the model is relatively sure that this is a stop sign (prob
 
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
-| .60         			| Stop sign   									| 
-| .20     				| U-turn 										|
-| .05					| Yield											|
-| .04	      			| Bumpy Road					 				|
-| .01				    | Slippery Road      							|
+| 1.0         			| Right-of-way at the next intersection   									| 
+| 1.0     				| Speed limit(30km/h) 										|
+| 1.0					| Turn left ahead											|
+| 1.0	      			| General caution						 				|
+| 1.0				    | Speed limit(50km/h)     							|
 
 
 For the second image ... 
