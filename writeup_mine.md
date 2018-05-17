@@ -89,25 +89,38 @@ My final model consisted of the following layers:
 | 2.Convolution 5x5 	  | 1x1 stride, valid padding, RELU activation 	|14x14x6    |10x10x16|
 | RELU					            | 												                                |           | 						|
 | Max pooling			       | 2x2 stride, 2x2 kernel size	   					        |10x10x16   |5x5x16 |
-| Flatten				          | 3 dimensions -> 1 dimension					            |5x5x16     | 400   |
+| Flatten				          |                            					            |5x5x16     | 400   |
 | 3.Fully Connected    | connect all layers                   			    |400        | 120   |
-| dropout				          | 		    drop some datas avoiding 	overfitting |           | 						|
-| 4.Fully Connected    | output = number of traffic signs in data set	|120|84|
+| RELU					            | 												                                |           | 						|
+| dropout				          | 		 drop some datas avoiding 	overfitting    |           | 						|
+| 4.Fully Connected    |                                             |120|84|
 | RELU					            | 							activation                            |         | 						|
 | 5.Fully Connected    | 	      connect all 43 layers                 |83       | **43**|
  
 
+#### 3. Model tranning 
 
-#### 3. Describe how you trained your model. The discussion can include the type of optimizer, the batch size, number of epochs and any hyperparameters such as learning rate.
+To train the model, I used a classic model architecture-LeNet5 for traffic signs classification, which was also knew according to Udacity class lab. Learn to use it, that is more important.
 
-To train the model, I used an ....
+But to use it, it needed some changed. The Subsampling layers were replaced with max pooling layers, and activation function used ReLU which helps created nonlinear results. Counting the total sign classes, the output classes was thus set to 43. The optimizer was AdamOptimizer.
+
+During adjustment, I also added a Dropout layer to see whether it help release over-fitting. It turns out to be pretty well, though the train accuracy is a (1.1-0.2) lower than before. 
+
+The number of epochs has also been related to trainning effect. worrying it took too long, I only set it to 20 at most. Learning rate was set to 0.001 at first and then 0.0008. As epoch was low, I didn't see obvious change for now.
+
+Here are my parameters for tranning:
+rate=0.0008
+EPOCHS = 20
+BATCH_SIZE = 128
+SIGMA = 0.1
+
 
 #### 4. Describe the approach taken for finding a solution and getting the validation set accuracy to be at least 0.93. Include in the discussion the results on the training, validation and test sets and where in the code these were calculated. Your approach may have been an iterative process, in which case, outline the steps you took to get to the final solution and why you chose those steps. Perhaps your solution involved an already well known implementation or architecture. In this case, discuss why you think the architecture is suitable for the current problem.
 
 My final model results were:
-* training set accuracy of ?
-* validation set accuracy of ? 
-* test set accuracy of ?
+* training set accuracy of 0.996
+* validation set accuracy of 0.941
+* test set accuracy of 0.927
 
 If an iterative approach was chosen:
 * What was the first architecture that was tried and why was it chosen?
