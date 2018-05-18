@@ -72,10 +72,10 @@ My model consisted of the following layers:
 |:---------------------:|:---------------------------------------------:|:----:|:----:| 
 | 1.Convolution 3x3    | 1x1 stride, valid padding, RELU activation 	|**32x32x1**|28x28x6|
 | RELU					            | 							activation                             |           | 						|
-| Max pooling			       | 2x2 stride, 2x2 kernel size						           |28x28x6    |14x14x6|
+| Max pooling			       | 2x2 kernel size, 2x2 stride  						           |28x28x6    |14x14x6|
 | 2.Convolution 5x5 	  | 1x1 stride, valid padding, RELU activation 	|14x14x6    |10x10x16|
 | RELU					            | 							activation                           |           | 						|
-| Max pooling			       | 2x2 stride, 2x2 kernel size	   					        |10x10x16   |5x5x16 |
+| Max pooling			       | 2x2 kernel size, 2x2 stride	   					        |10x10x16   |5x5x16 |
 | Flatten				          |          flatten 3D to 1D  					            |5x5x16     | 400   |
 | 3.Fully Connected    |   connect some layers                			    |400        | 120   |
 | RELU					            | 							activation                           |           | 						|
