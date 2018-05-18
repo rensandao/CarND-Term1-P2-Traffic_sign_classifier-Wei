@@ -44,7 +44,7 @@ signs data set:
 Here is an exploratory visualization of the data set. It is a bar chart showing how the data is distributed under every different sign.
 As is shown, some of data is obviously higher, while some others look like too low.
 
-![visualization] (./visualizedimages/bar_chart.png "visuliazation"]
+![visualization](./visualizedimages/bar_chart.png "visuliazation")
 ![original training images](./new_images/1.png "original training images")
 
 ### Design and Test a Model Architecture
@@ -134,8 +134,12 @@ As is written above, I did some adjustments to make it suitable for traffic sign
 
 Here are five German traffic signs that I found on the web:
 
-![alt text][image4] ![alt text][image5] ![alt text][image6] 
-![alt text][image7] ![alt text][image8]
+![Right-of-way at the next intersection](./new_images/1.png "Right-of-way at the next intersection")
+![Speed limit(30km/h)](./new_images/2.png "Speed limit(30km/h)")
+![Turn left ahead](./new_images/3.png "Turn left ahead")
+![Speed limit(30km/h)](./new_images/4.png "General caution")
+![Speed limit(60km/h)](./new_images/5.png "Speed limit(60km/h)")
+
 
 Actually, I think these five images can be easy to dectect, because it is clear and we can easily distinguish them with our real eye. However, it came out to be a little different.
 
