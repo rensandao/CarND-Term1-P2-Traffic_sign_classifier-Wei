@@ -104,12 +104,12 @@ To train the model, I used a classic model architecture-LeNet5 for traffic signs
 
 But to use it, it needed some changed. The Subsampling layers were replaced with max pooling layers, and activation function used ReLU which helps created nonlinear results. Counting the total sign classes, the output classes was thus set to 43. The optimizer was AdamOptimizer, as it was.
 
-During adjustment, I also added a Dropout layer to see whether it help release over-fitting. It turns out to be pretty well, though the train accuracy is a (1.1-0.2) lower than before. 
+During adjustment, I also added a Dropout layer to see whether it help release over-fitting. It turns out to be pretty well, though the train accuracy is a (0.1-0.2) lower than before. 
 
 The number of epochs has also been related to trainning effect. worrying it took too long, I only set it to 20 at most. Learning rate was set to 0.001 at first and then 0.0008. As epoch was low, I didn't see obvious change for now.
 
 Here are my parameters for tranning:
-* rate=0.0008
+* rate= 0.0008
 * EPOCHS = 20
 * BATCH_SIZE = 128
 * SIGMA = 0.1
@@ -118,9 +118,9 @@ Here are my parameters for tranning:
 #### 4. Describe the approach taken for finding a solution and getting the validation set accuracy to be at least 0.93. Include in the discussion the results on the training, validation and test sets and where in the code these were calculated. Your approach may have been an iterative process, in which case, outline the steps you took to get to the final solution and why you chose those steps. Perhaps your solution involved an already well known implementation or architecture. In this case, discuss why you think the architecture is suitable for the current problem.
 
 My final model results were:
-* training set accuracy of 0.996
-* validation set accuracy of 0.941
-* test set accuracy of 0.927
+* training set accuracy of **0.996**
+* validation set accuracy of **0.941**
+* test set accuracy of **0.927**
 
 As is written above, I did some adjustmnets to make it suitable for traffic signs classification, based on the classic LeNet-5 architecture. The main changes is as following:
 * Firstly, with the adjusted architecture LeNet5, and process data with grayscale and normalization, I got 0.984 and 0.899 respectively for trainning and validation accuracy. I changed the EPOCH from 10, 15 to 20 to see whether it got better, which turned out to negative.
@@ -136,7 +136,7 @@ Here are five German traffic signs that I found on the web:
 ![alt text][image4] ![alt text][image5] ![alt text][image6] 
 ![alt text][image7] ![alt text][image8]
 
-Actually, I think these five images can be easy to dectect, because we can easily distinguish them with our real eye. However, it came out to be a little different.
+Actually, I think these five images can be easy to dectect, because it is clear and we can easily distinguish them with our real eye. However, it came out to be a little different.
 
 #### 2. Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set. At a minimum, discuss what the predictions were, the accuracy on these new predictions, and compare the accuracy to the accuracy on the test set (OPTIONAL: Discuss the results in more detail as described in the "Stand Out Suggestions" part of the rubric).
 
