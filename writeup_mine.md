@@ -122,8 +122,8 @@ My final model results were:
 * validation set accuracy of **0.941**
 * test set accuracy of **0.927**
 
-As is written above, I did some adjustmnets to make it suitable for traffic signs classification, based on the classic LeNet-5 architecture. The main changes is as following:
-* Firstly, with the adjusted architecture LeNet5, and process data with grayscale and normalization, I got 0.984 and 0.899 respectively for trainning and validation accuracy. I changed the EPOCH from 10, 15 to 20 to see whether it got better, which turned out to negative.
+As is written above, I did some adjustments to make it suitable for traffic signs classification, based on the classic LeNet-5 architecture. The main changes is as following:
+* With the adjusted architecture LeNet5, and process data with grayscale and normalization, I got 0.984 and 0.899 respectively for trainning and validation accuracy. I changed the EPOCH from 10, 15 to 20 to see whether it got better, which turned out to negative.
 * After adding the CLAHE to promote the contrast, I got 0.998 for trainning set and 0.947 for validation. I wondered it was over-fitting, so I lately adding 1-2 dropout layer with keep_probability of 0.8 , found the accuracy got slightly decreased. 
 
 
@@ -151,13 +151,13 @@ Here are the results of the prediction:
 | Speed limit(60km/h)			| Speed limit(50km/h)  |
 
 
-The model was able to correctly guess 4 of the 5 traffic signs, which gives an accuracy of 80%. This compares favorably to the accuracy on the test set of ...
+The model was able to correctly guess 4 of the 5 traffic signs, which gives an accuracy of 80%. This is lower than the accuracy of 92.7% on the test set. It sounds reasonable when it comes to a small set of samples. But it failed classifying the fifth image, which 
+made me feel a little unhoped and less confident on my deep learning architecture. It may tell I need to improve accuracy with more data preprocess.  
 
 #### 3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction. Provide the top 5 softmax probabilities for each image along with the sign type of each probability. (OPTIONAL: as described in the "Stand Out Suggestions" part of the rubric, visualizations can also be provided such as bar charts)
 
-The code for making predictions on my final model is located in the 11th cell of the Ipython notebook.
-
-For the first image, the model is relatively sure that this is a stop sign (probability of 0.6), and the image does contain a stop sign. The top five soft max probabilities were
+Firstly, the model showed absolutely certain to these five images with all probability of 100%.
+The top five softmax probabilities were
 
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
@@ -168,7 +168,12 @@ For the first image, the model is relatively sure that this is a stop sign (prob
 | 1.0				    | Speed limit(50km/h)     							|
 
 
-For the second image ... 
+For the fifth image, the model is relatively sure that this is a Speed limit (probability of 1.0), but with 50km/h. Luckily it is classified to the low speed limit. If were classified to higher speed scope, it can lead to bad consequence in real situation. Thus, more work need to do to improve it.
+
+Next, I will consider more adjustments as following:
+* Expand and fake some data with low distributed rate, as DNN tends to be partial to those with high rate like we people do.
+* Train the network for higher epochs to explore the accuracy's maximum stability.
+* Choose some other German traffic images to test the effect after improvement. 
 
 ### (Optional) Visualizing the Neural Network (See Step 4 of the Ipython notebook for more details)
 #### 1. Discuss the visual output of your trained network's feature maps. What characteristics did the neural network use to make classifications?
