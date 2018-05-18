@@ -79,7 +79,7 @@ The difference between the original data set and the augmented data set is the f
 
 #### 2. Model architecture
 
-My final model consisted of the following layers:
+My model consisted of the following layers:
 
 | Layer         		|     Description	        					                       | Input | Output |
 |:---------------------:|:---------------------------------------------:|:----:|:----:| 
