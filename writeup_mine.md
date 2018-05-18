@@ -57,7 +57,7 @@ After grayscale, I applied Data normalization to get the input features data clo
 With them, the final valudation accuracy can achieve 0.899 at most. This is obviously lower than aquirement(0.93).
 
 After watching images from the train set, I found some of them have low background contrast, which quitely make it hard to classify. So
-I decided to apply [CLAHE](https://docs.opencv.org/3.1.0/d5/daf/tutorial_py_histogram_equalization.html) to promote contrast. And it did work. The validation accuracy comes to 94.1%, an obvious improvement. 
+I decided to apply CV library- [CLAHE](https://docs.opencv.org/3.1.0/d5/daf/tutorial_py_histogram_equalization.html) to promote contrast. And it did work. The validation accuracy comes to 94.1%, an obvious improvement. 
 
 
 Here is an example of a traffic sign image before and after grayscaling.
