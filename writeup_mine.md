@@ -30,8 +30,7 @@ You're reading it! and here is a link to my [project code](https://github.com/re
 
 #### 1. Provide a basic summary of the data set. In the code, the analysis should be done using python, numpy and/or pandas methods rather than hardcoding results manually.
 
-I used the pandas library to calculate summary statistics of the traffic
-signs data set:
+I used the pandas library to calculate summary statistics of the traffic signs data set:
 
 * The size of training set is **34799**
 * The size of the validation set is **12630**
@@ -44,8 +43,8 @@ signs data set:
 Here is an exploratory visualization of the data set. It is a bar chart showing how the data is distributed under every different sign.
 As is shown, some of data is obviously higher, while some others look like too low.
 
-![visualization](./visualizedimages/bar_chart.png "visuliazation")
-![original training images](./new_images/1.png "original training images")
+[visualization](https://github.com/rensandao/CarND-term1-p2-traffic-sign-classifier/tree/master/visualized%20images)
+
 
 ### Design and Test a Model Architecture
 
