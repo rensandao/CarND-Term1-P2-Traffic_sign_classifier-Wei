@@ -44,7 +44,7 @@ signs data set:
 Here is an exploratory visualization of the data set. It is a bar chart showing how the data is distributed under every different sign.
 As is shown, some of data is obviously higher, while some others look like too low.
 
-![visualization](./visualized images/bar_chart.jpg）
+![visualization](./visualized images/bar_chart.png）
 
 ### Design and Test a Model Architecture
 
