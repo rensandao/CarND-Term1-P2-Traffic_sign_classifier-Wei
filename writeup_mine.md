@@ -49,7 +49,7 @@ As is shown, some of data is obviously higher, while some others look like too l
 
 #### 1. Preprocess the image data.
 
-For a first try, I converted the images to grayscale. Because basically color is not main feature in sign classifier, using grayscale can make it easier for Iterative calculation.
+For a first try, I converted the images to grayscale. Because basically color is not main feature in sign classifier, and using grayscale can also make it easier for Iterative calculation.
 
 After grayscale, I applied Data normalization to get the input features data close in certain scope(-1,1). That can make Loss Optimization more concentrated and faster.
 
@@ -58,25 +58,11 @@ With them, the final valudation accuracy can achieve 0.899 at most. This is obvi
 After watching images from the train set, I found some of them have low background contrast, which quitely make it hard to classify. So
 I decided to apply CV library- [CLAHE](https://docs.opencv.org/3.1.0/d5/daf/tutorial_py_histogram_equalization.html) to promote contrast. And it did work. The validation accuracy comes to 94.1%, an obvious improvement. 
 
+Here is an example of a traffic sign image before and after preprocess.
 
-Here is an example of a traffic sign image before and after grayscaling.
-
-|original image|preprocessed image
+|origin-Grayscale-Normalized|CLAHE
 |----|----|
 |![process-1](./new_images/Grayscale-Normalization.png "process-1")|![CLAHE](./new_images/CLAHE.png "CLAHE")|
-
-As a last step, I normalized the image data because ...
-
-I decided to generate additional data because ... 
-
-To add more data to the the data set, I used the following techniques because ... 
-
-Here is an example of an original image and an augmented image:
-
-![alt text][image3]
-
-The difference between the original data set and the augmented data set is the following ... 
-
 
 #### 2. Model architecture
 
