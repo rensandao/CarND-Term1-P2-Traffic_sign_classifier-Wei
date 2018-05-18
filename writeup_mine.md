@@ -45,7 +45,7 @@ Here is an exploratory visualization of the data set. It is a bar chart showing 
 As is shown, some of data is obviously higher, while some others look like too low.
 
 ![visualization] (./visualizedimages/bar_chart.png "visuliazation"]
-![original training images](./visualized images/bar_chart.training_data_raw.png "original training images")
+![original training images](./new_images/1.png "original training images")
 
 ### Design and Test a Model Architecture
 
