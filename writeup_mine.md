@@ -122,7 +122,7 @@ My final model results were:
 * validation set accuracy of **0.941**
 * test set accuracy of **0.927**
 
-As is written above, I did some adjustments to make it suitable for traffic signs classification, based on the classic LeNet-5 architecture. The main changes is as following:
+As is written above, I did some adjustments to make it suitable for traffic signs classification, based on the classic LeNet-5 architecture. The main changes of accuracy are as following:
 * With the adjusted architecture LeNet5, and process data with grayscale and normalization, I got 0.984 and 0.899 respectively for trainning and validation accuracy. I changed the EPOCH from 10, 15 to 20 to see whether it got better, which turned out to negative.
 * After adding the CLAHE to promote the contrast, I got 0.998 for trainning set and 0.947 for validation. I wondered it was over-fitting, so I lately adding 1-2 dropout layer with keep_probability of 0.8 , found the accuracy got slightly decreased. 
 
