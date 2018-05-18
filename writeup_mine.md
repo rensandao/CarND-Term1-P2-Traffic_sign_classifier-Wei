@@ -62,7 +62,7 @@ I decided to apply CV library- [CLAHE](https://docs.opencv.org/3.1.0/d5/daf/tuto
 
 Here is an example of a traffic sign image before and after grayscaling.
 
-![alt text][image2]
+![alt text][./new_images/1.png]
 
 As a last step, I normalized the image data because ...
 
