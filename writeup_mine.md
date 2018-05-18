@@ -165,6 +165,7 @@ Next, I will consider more adjustments as following:
 * Expand and fake some data with low distributed rate, as DNN tends to be partial to those with high rates like we people do.
 * Train the network for higher epochs to explore the accuracy's maximum stability.
 * Choose some other German traffic images to test the effect after improvement. 
+* using more augmented technique to see improvment on images and accuracy.
 
 ### Resource and reference
 * Source code: [Traffic_Sign_Classifier.ipynb](./Traffic_Sign_Classifier.ipynb)
