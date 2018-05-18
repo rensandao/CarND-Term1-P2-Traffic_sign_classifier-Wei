@@ -44,7 +44,7 @@ signs data set:
 Here is an exploratory visualization of the data set. It is a bar chart showing how the data is distributed under every different sign.
 As is shown, some of data is obviously higher, while some others look like too low.
 
-![visualization](./visualized/bar_chart.jpg）
+![visualization](./visualized images/bar_chart.jpg）
 
 ### Design and Test a Model Architecture
 
@@ -171,7 +171,7 @@ The top five softmax probabilities were
 For the fifth image, the model is relatively sure that this is a Speed limit (probability of 1.0), but with 50km/h. Luckily it is classified to the low speed limit. If were classified to higher speed scope, it can lead to bad consequence in real situation. Thus, more work need to do to improve it.
 
 Next, I will consider more adjustments as following:
-* Expand and fake some data with low distributed rate, as DNN tends to be partial to those with high rate like we people do.
+* Expand and fake some data with low distributed rate, as DNN tends to be partial to those with high rates like we people do.
 * Train the network for higher epochs to explore the accuracy's maximum stability.
 * Choose some other German traffic images to test the effect after improvement. 
 
