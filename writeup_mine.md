@@ -82,7 +82,7 @@ My model consisted of the following layers:
 | dropout				          | 		 drop some datas avoiding 	overfitting    |           | 						|
 | 4.Fully Connected    |          connect some layers                 |120|84|
 | RELU					            | 							activation                            |         | 						|
-| 5.Fully Connected    | 	      connect all 43 layers                 |83       | **43**|
+| 5.Fully Connected    | 	      connect to 43 layers                  |83       | **43**|
  
 
 #### 3. Model tranning 
