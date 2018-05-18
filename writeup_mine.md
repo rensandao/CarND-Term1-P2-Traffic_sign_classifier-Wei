@@ -166,7 +166,7 @@ Next, I will consider more adjustments as following:
 * Train the network for higher epochs to explore the accuracy's maximum stability.
 * Choose some other German traffic images to test the effect after improvement. 
 
-### (Optional) Visualizing the Neural Network (See Step 4 of the Ipython notebook for more details)
-#### 1. Discuss the visual output of your trained network's feature maps. What characteristics did the neural network use to make classifications?
-
+### Resource and reference
+* Source code: [Traffic_Sign_Classifier.ipynb](./Traffic_Sign_Classifier.ipynb)
+* Udacity repository: [CarND-Traffic-Sign-Classifier-Project](https://github.com/udacity/CarND-Traffic-Sign-Classifier-Project)
 
