@@ -136,9 +136,9 @@ Here are five German traffic signs that I found on the web:
 
 ![Right-of-way at the next intersection](./new_images/1.png "Right-of-way at the next intersection")
 ![Speed limit(30km/h)](./new_images/2.png "Speed limit(30km/h)")
-![Turn left ahead](./new_images/3.png "Turn left ahead")
-![Speed limit(30km/h)](./new_images/4.png "General caution")
-![Speed limit(60km/h)](./new_images/5.png "Speed limit(60km/h)")
+![Turn left ahead](./new_images/4.png "Turn left ahead")
+![Speed limit(30km/h)](./new_images/6.png "General caution")
+![Speed limit(60km/h)](./new_images/8.png "Speed limit(60km/h)")
 
 
 Actually, I think these five images can be easy to dectect, because it is clear and we can easily distinguish them with our real eye. However, it came out to be a little different.
