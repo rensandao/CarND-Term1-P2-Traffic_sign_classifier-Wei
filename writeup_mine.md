@@ -43,8 +43,7 @@ I used the pandas library to calculate summary statistics of the traffic signs d
 Here is an exploratory visualization of the data set. It is a bar chart showing how the data is distributed under every different sign.
 As is shown, some of data is obviously higher, while some others look like too low.
 
-![visualization](./images/histogram.png "visualization")
-
+![visualization](./new_images/histogram.png "visualization")
 
 ### Design and Test a Model Architecture
 
@@ -62,7 +61,9 @@ I decided to apply CV library- [CLAHE](https://docs.opencv.org/3.1.0/d5/daf/tuto
 
 Here is an example of a traffic sign image before and after grayscaling.
 
-![alt text][./new_images/1.png]
+|original image|preprocessed image
+|----|----|
+|![process-1](./new_images/Grayscale-Normalization.png "process-1")|![CLAHE](./new_images/CLAHE.png "CLAHE")|
 
 As a last step, I normalized the image data because ...
 
