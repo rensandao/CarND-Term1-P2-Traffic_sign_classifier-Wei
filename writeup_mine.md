@@ -170,4 +170,5 @@ Next, I will consider more adjustments as following:
 ### Resource and reference
 * Source code: [Traffic_Sign_Classifier.ipynb](./Traffic_Sign_Classifier.ipynb)
 * Udacity repository: [CarND-Traffic-Sign-Classifier-Project](https://github.com/udacity/CarND-Traffic-Sign-Classifier-Project)
+* code reference:[reference](https://feichashao.com/carnd-traffic-sign-classifier/)
 
