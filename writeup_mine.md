@@ -43,7 +43,7 @@ I used the pandas library to calculate summary statistics of the traffic signs d
 Here is an exploratory visualization of the data set. It is a bar chart showing how the data is distributed under every different sign.
 As is shown, some of data is obviously higher, while some others look like too low.
 
-[visualization](https://github.com/rensandao/CarND-term1-p2-traffic-sign-classifier/tree/master/visualized%20images)
+![visualization](./images/histogram.png "visualization")
 
 
 ### Design and Test a Model Architecture
